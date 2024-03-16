@@ -31,13 +31,14 @@ const { isSuccess: contractWriteIsSuccess } = useWaitForTransactionReceipt({
   hash: contractWriteHash,
 });
 const { showAlert } = useAlert();
-const { abi, address: theGardenContractAddress } = theGardenContract();
+const { abi, address: theGardenContractAddress, ownerAddress } = theGardenContract();
 
 const { data: ipfsHashString, isLoading } = useGetIpfsHashContent(props.post.ipfsHash);
 const { refetch: refetchAccepteds } = useGraphAccepteds();
 
 // COMPUTED
 const isAccepted = props.acceptedList.includes(props.post.ipfsHash);
+const isOwner = isSameAddress(props.address, ownerAddress)
 
 // WATCHERS
 watchEffect(() => {
@@ -100,7 +101,7 @@ function acceptPost() {
         Connect wallet
       </Button>
       <Button
-        v-else-if="!isAcceptor || isSameAddress(post.proposer, address)"
+        v-else-if="!isSameAddress && (!isAcceptor || isSameAddress(post.proposer, address))"
         type="Light"
         class="min-w-40"
         disabled

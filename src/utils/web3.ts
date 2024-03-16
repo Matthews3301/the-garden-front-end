@@ -1,3 +1,3 @@
-export function isSameAddress(a: string, b: string) {
-  return a.toLowerCase() === b.toLowerCase();
+export function isSameAddress(a: string | undefined, b: string | undefined) {
+  return a?.toLowerCase() === b?.toLowerCase();
 }

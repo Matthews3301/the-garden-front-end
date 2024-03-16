@@ -1,10 +1,14 @@
-import { polygon } from 'use-wagmi/chains';
+import { polygon, base } from 'use-wagmi/chains';
 
 const networks = {
   137: {
     name: 'Polygon',
     wagmiChain: polygon,
   },
+  8453: {
+    name: 'Base',
+    wagmiChain: base,
+  }
 } as { [key: number]: any };
 
 
