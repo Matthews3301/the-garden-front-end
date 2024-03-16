@@ -101,7 +101,7 @@ function acceptPost() {
         Connect wallet
       </Button>
       <Button
-        v-else-if="!isSameAddress && (!isAcceptor || isSameAddress(post.proposer, address))"
+        v-else-if="!isOwner && (!isAcceptor || isSameAddress(post.proposer, address))"
         type="Light"
         class="min-w-40"
         disabled
