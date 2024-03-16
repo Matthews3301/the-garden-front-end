@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Raleway";
+  font-weight: 400;
+  src: url(/fonts/raleway.woff2) format('woff2');
+}
+@font-face {
+    font-family: "Raleway";
+    font-weight: 500;
+    src: url(/fonts/raleway.woff2) format('woff2');
+}
+@font-face {
+    font-family: "Signora";
+    font-weight: 500;
+    src: url(/fonts/sig.woff2) format('woff2');
+}
+
+.font-raleway {
+  font-family: "Raleway", "Roboto", Arial, sans-serif;
+}
+
+.font-ven {
+  font-family: "Signora", "Roboto", Arial, sans-serif;
+}
+
+

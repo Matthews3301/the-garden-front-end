@@ -1,0 +1,10 @@
+// .eslintignore
+build/*
+dist/*
+public/*
+ 
+**/node_modules/*
+**/out/*
+**/.nuxt/*
+nuxt.config.js
+

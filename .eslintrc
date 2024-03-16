@@ -1,0 +1,66 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+  },
+  "extends": ["@nuxt/eslint-config", "plugin:prettier/recommended"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "src",
+            "./src"
+          ]
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".vue",
+          ".json"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "no-unused-vars": 0,
+    "vue/require-v-for-key": 0,
+    "vue/multi-word-component-names": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "no-alert": 0,
+    "camelcase": 0,
+    "no-console": 0,
+    "no-param-reassign": 0,
+    "naming-convention": 0,
+    "default-param-last": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": 0,
+    "no-restricted-exports": 0,
+    "no-promise-executor-return": 0,
+    "import/prefer-default-export": 0,
+    "prefer-destructuring": [
+      1,
+      {
+        "object": true,
+        "array": false
+      }
+    ],
+    "unused-imports/no-unused-imports": 0,
+    "unused-imports/no-unused-vars": [
+      0,
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  }
+}
