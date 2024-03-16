@@ -30,6 +30,7 @@ export default function useGraphAcceptor(address?: string) {
         variables: {
           address: formattedAddress,
         },
+        fetchPolicy: 'network-only'
       });
 
       return response?.data?.acceptorAddeds.length > 0;

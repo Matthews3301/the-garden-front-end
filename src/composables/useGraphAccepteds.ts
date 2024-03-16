@@ -35,6 +35,7 @@ export default function useGraphAccepteds() {
     try {
       const response = await graphQlClient.query({
         query: gql(GRAPHQL_QUERY_GET_IPFS_HASH_ACCEPTEDS),
+        fetchPolicy: 'network-only'
       });
 
       return response?.data ?? { ipfsHashAccepteds: [] };

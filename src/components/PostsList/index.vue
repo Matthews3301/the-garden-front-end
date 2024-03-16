@@ -24,9 +24,11 @@ const acceptedHashList = computed(
 <template>
   <div>
     <Divider />
-    <div v-for="ipfsHashObject in ipfsHashesAdded?.ipfsHashAddeds">
+    <div
+      v-for="ipfsHashObject in ipfsHashesAdded?.ipfsHashAddeds"
+      :key="ipfsHashObject.ipfsHash"
+    >
       <Post
-        :key="ipfsHashObject.ipfsHash"
         :post="ipfsHashObject"
         :accepted-list="acceptedHashList"
         :address="address"
